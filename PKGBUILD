@@ -5,7 +5,7 @@
 # Maintainer: James Kittsmiller (AJSlye) <james@nulogicsystems.com>
 
 pkgname=nemo-qml-plugin-devicelock-git
-pkgver=0.3.6.r0.gf10be30
+pkgver=0.3.7.r0.g453727e
 pkgrel=1
 pkgdesc="Device lock plugin for Nemo Mobile"
 arch=('x86_64' 'aarch64')
@@ -40,6 +40,7 @@ package() {
     make -j 1 INSTALL_ROOT="$pkgdir/" install
     cd "$pkgdir"
     mkdir -p usr/lib/${pkgname}
+    mkdir -p run/nemo-devicelock
     mv usr/libexec/* usr/lib/${pkgname}
     rm -rf usr/libexec
 
