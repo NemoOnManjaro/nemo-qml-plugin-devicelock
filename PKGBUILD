@@ -12,7 +12,7 @@ pkgdesc="Device lock plugin for Nemo Mobile"
 arch=('x86_64' 'aarch64')
 url="https://github.com/sailfishos/nemo-qml-plugin-devicelock"
 license=('BSD-3-Clause')
-depends=('nemo-qml-plugin-dbus'
+depends=('nemo-qml-plugin-dbus>=2.1.34'
     'nemo-keepalive>=1.8.10')
 source=("${url}/archive/refs/tags/$pkgver.tar.gz"
 	'0001-Fixup-build-on-qt6.patch'
